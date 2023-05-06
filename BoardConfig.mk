@@ -13,7 +13,7 @@ DEVICE_PATH := device/motorola/caprip
 TARGET_BOOTLOADER_BOARD_NAME := caprip
 
 # Display
-TARGET_SCREEN_DENSITY := 420
+TARGET_SCREEN_DENSITY := 280
 
 # HIDL
 ODM_MANIFEST_SKUS += b bc d dc dn dnc n nc
