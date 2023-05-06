@@ -16,13 +16,15 @@ TARGET_BOOTLOADER_BOARD_NAME := caprip
 TARGET_SCREEN_DENSITY := 280
 
 # HIDL
-ODM_MANIFEST_SKUS += b bc d dc dn dnc n nc
+ODM_MANIFEST_SKUS += b bc d dc dn dnc f fc n nc
 ODM_MANIFEST_B_FILES := $(DEVICE_PATH)/sku/manifest_b.xml
 ODM_MANIFEST_BC_FILES := $(DEVICE_PATH)/sku/manifest_bc.xml
 ODM_MANIFEST_D_FILES := $(DEVICE_PATH)/sku/manifest_d.xml
 ODM_MANIFEST_DC_FILES := $(DEVICE_PATH)/sku/manifest_dc.xml
 ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/sku/manifest_dn.xml
 ODM_MANIFEST_DNC_FILES := $(DEVICE_PATH)/sku/manifest_dnc.xml
+ODM_MANIFEST_F_FILES := $(DEVICE_PATH)/sku/manifest_f.xml
+ODM_MANIFEST_FC_FILES := $(DEVICE_PATH)/sku/manifest_fc.xml
 ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/sku/manifest_n.xml
 ODM_MANIFEST_NC_FILES := $(DEVICE_PATH)/sku/manifest_nc.xml
 
