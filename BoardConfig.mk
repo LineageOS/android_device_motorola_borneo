@@ -39,7 +39,7 @@ BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 100
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2023-02-01
+VENDOR_SECURITY_PATCH := 2023-03-01
 
 # Inherit from the proprietary version
 include vendor/motorola/caprip/BoardConfigVendor.mk
