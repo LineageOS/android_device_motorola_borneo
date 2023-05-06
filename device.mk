@@ -45,5 +45,8 @@ PRODUCT_COPY_FILES += \
 $(foreach DEVICE_SKU, $(DEVICE_COMPASS_SKUS), \
     $(LOCAL_PATH)/permissions/unavail.android.hardware.sensor.compass.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_$(DEVICE_SKU)/unavail.android.hardware.sensor.compass.xml)
 
+# Shipping API level
+PRODUCT_SHIPPING_API_LEVEL := 30
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/motorola/caprip/caprip-vendor.mk)
