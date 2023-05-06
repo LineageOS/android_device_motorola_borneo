@@ -31,6 +31,10 @@ ODM_MANIFEST_NC_FILES := $(DEVICE_PATH)/sku/manifest_nc.xml
 # Kernel
 TARGET_KERNEL_CONFIG += vendor/ext_config/caprip-default.config
 
+# Partitions
+BOARD_SUPER_PARTITION_SIZE := 10804527104
+BOARD_MOTO_DYNAMIC_PARTITIONS_SIZE := 10800332800 # BOARD_SUPER_PARTITION_SIZE - 4MB
+
 # Recovery
 TARGET_RECOVERY_DENSITY := hdpi
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom_emmc
