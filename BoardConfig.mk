@@ -32,6 +32,7 @@ ODM_MANIFEST_NC_FILES := $(DEVICE_PATH)/sku/manifest_nc.xml
 TARGET_KERNEL_CONFIG += vendor/ext_config/caprip-default.config
 
 # Recovery
+TARGET_RECOVERY_DENSITY := hdpi
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom_emmc
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 43
 
