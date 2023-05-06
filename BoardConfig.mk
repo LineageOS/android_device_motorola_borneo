@@ -7,10 +7,10 @@
 # Inherit from sm6225-common
 include device/motorola/sm6225-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/motorola/hawao
+DEVICE_PATH := device/motorola/caprip
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := hawao
+TARGET_BOOTLOADER_BOARD_NAME := caprip
 
 # Display
 TARGET_SCREEN_DENSITY := 420
@@ -27,7 +27,7 @@ ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/sku/manifest_n.xml
 ODM_MANIFEST_NC_FILES := $(DEVICE_PATH)/sku/manifest_nc.xml
 
 # Kernel
-TARGET_KERNEL_CONFIG += vendor/ext_config/hawao-default.config
+TARGET_KERNEL_CONFIG += vendor/ext_config/caprip-default.config
 
 # Kernel Modules - Vendor Boot
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/vendor_boot.modules.load))
@@ -40,4 +40,4 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 100
 VENDOR_SECURITY_PATCH := 2023-02-01
 
 # Inherit from the proprietary version
-include vendor/motorola/hawao/BoardConfigVendor.mk
+include vendor/motorola/caprip/BoardConfigVendor.mk
