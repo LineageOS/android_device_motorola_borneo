@@ -11,3 +11,6 @@ vendor.display.disable_mask_layer_hint=1
 
 # Fingerprint
 vendor.false_touch_quality=25
+
+# Radio
+ro.vendor.radio.imei.sv=33
