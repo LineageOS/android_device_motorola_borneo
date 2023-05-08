@@ -7,10 +7,10 @@
 # Inherit from sm6225-common
 include device/motorola/sm6225-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/motorola/caprip
+DEVICE_PATH := device/motorola/borneo
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := caprip
+TARGET_BOOTLOADER_BOARD_NAME := borneo
 
 # Display
 TARGET_SCREEN_DENSITY := 280
@@ -29,7 +29,7 @@ ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/sku/manifest_n.xml
 ODM_MANIFEST_NC_FILES := $(DEVICE_PATH)/sku/manifest_nc.xml
 
 # Kernel
-TARGET_KERNEL_CONFIG += vendor/ext_config/caprip-default.config
+TARGET_KERNEL_CONFIG += vendor/ext_config/borneo-default.config
 
 # Partitions
 BOARD_SUPER_PARTITION_SIZE := 10804527104
@@ -44,4 +44,4 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 43
 VENDOR_SECURITY_PATCH := 2023-03-01
 
 # Inherit from the proprietary version
-include vendor/motorola/caprip/BoardConfigVendor.mk
+include vendor/motorola/borneo/BoardConfigVendor.mk

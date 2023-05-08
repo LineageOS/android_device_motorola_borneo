@@ -54,4 +54,4 @@ $(foreach DEVICE_SKU, $(DEVICE_COMPASS_SKUS), \
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/motorola/caprip/caprip-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/borneo/borneo-vendor.mk)
