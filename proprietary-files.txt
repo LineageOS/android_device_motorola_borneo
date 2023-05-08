@@ -122,6 +122,7 @@ vendor/lib64/libipebpsstriping.so
 vendor/lib64/libjpege.so
 vendor/lib64/liblmutils-ns.so
 vendor/lib64/liblowlight_ai_portrait.arcsoft.so
+vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmmcamera_cac3.so
 vendor/lib64/libmmcamera_mfnr.so
 vendor/lib64/libmot_afd.so
@@ -130,6 +131,7 @@ vendor/lib64/libofflinelog.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopestriping.so
 vendor/lib64/libswregistrationalgo.so
+vendor/lib64/libtfestriping.so
 vendor/lib64/libvidhance.so
 
 # Camera-configs
