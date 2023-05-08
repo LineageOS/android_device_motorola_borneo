@@ -169,10 +169,6 @@ vendor/etc/camera/dual_golden_ov8856_wide.bin
 vendor/etc/camera/dual_golden_wide.bin
 vendor/etc/camera/vidhance_calibration
 
-# Camera (Permissions)
-product/etc/permissions/com.motorola.camera3.content.ai.xml
-product/etc/permissions/com.motorola.camera3.xml
-
 # Display (Calibration Data)
 vendor/etc/qdcm_calib_data_mipi_mot_vid_djn_nt36525c_652.xml
 vendor/etc/qdcm_calib_data_mipi_mot_vid_tianma_ili9882n_652.xml
