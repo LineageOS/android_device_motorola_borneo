@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <device name="Android">
     <item name="none">0</item>
-    <item name="screen.on">88.97</item>
-    <item name="screen.full">325.02</item>
+    <item name="screen.on">68.72</item>
+    <item name="screen.full">240.82</item>
     <item name="wifi.on">3.01</item>
     <item name="wifi.active">78.83</item>
     <item name="wifi.scan">78.45</item>
-    <item name="camera.avg">374.399</item>
-    <item name="camera.flashlight">265.769</item>
+    <item name="camera.avg">486.37</item>
+    <item name="camera.flashlight">161.32</item>
     <item name="gps.on">50.69</item>
     <item name="radio.active">208.332</item>
     <item name="radio.scanning">46.310</item>
