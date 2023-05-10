@@ -5,9 +5,8 @@
 # Copyright (c) 2019 Lenovo
 # All rights reserved.
 #
-# author: chengql2@lenovo.com
-# date: April 15, 2019
-#
+# April 15, 2019  chengql2@lenovo.com  Initial version
+# December 2, 2019  chengql2  Store fps_id into persist fs
 
 script_name=${0##*/}
 script_name=${script_name%.*}
@@ -29,7 +28,7 @@ fps_vendor=$(cat $persist_fps_id)
 log "FPS vendor: $fps_vendor"
 
 FPS_VENDOR_NONE=none
-FPS_VENDOR_CHIPONE=chipone
+FPS_VENDOR_EGIS=egis
 FPS_VENDOR_FPC=fpc
 
 prop_fps_status=vendor.hw.fingerprint.status
@@ -53,14 +52,12 @@ if [ $fps == $FPS_VENDOR_FPC ]; then
     log "start fps_hal"
     start fps_hal
 else
-    log "start fpsensor_hal"
-    start chipone_fp_hal
-    fps=$FPS_VENDOR_CHIPONE
+    log "start ets_hal"
+    start ets_hal
 fi
 
 log "wait for HAL finish ..."
 fps_status=$(getprop $prop_fps_status)
-log "fingerprint HAL status: $fps_status"
 while [ $fps_status == $FPS_STATUS_NONE ]; do
     sleep 0.2
     fps_status=$(getprop $prop_fps_status)
@@ -81,15 +78,11 @@ fi
 
 if [ $fps == $fps_vendor2 ]; then
     if [ $fps == $FPS_VENDOR_FPC ]; then
-        log "remove FPC driver"
         rmmod fpc1020_mmi
-        log "- install chipone driver"
-        insmod /vendor/lib/modules/fpsensor_spi_tee.ko
-        fps=$FPS_VENDOR_CHIPONE
+        insmod /vendor/lib/modules/ets_fps_mmi.ko
+        fps=$FPS_VENDOR_EGIS
     else
-        log "remove chipone driver"
-        rmmod fpsensor_spi_tee
-        log "- install fpc driver"
+        rmmod ets_fps_mmi
         insmod /vendor/lib/modules/fpc1020_mmi.ko
         fps=$FPS_VENDOR_FPC
     fi

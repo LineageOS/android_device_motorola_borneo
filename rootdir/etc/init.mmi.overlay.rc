@@ -8,19 +8,25 @@ on mmi-priority
    # and needs to load first. Touchscreen might need extra time
    # to perform firmware update if necessary
    setprop vendor.mmi_init.stage priority
-   exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules mmi_annotate mmi_info tzlog_dump watchdog_cpu_ctx mmi_sys_temp
+   exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules mmi_annotate mmi_info tzlog_dump watchdog_cpu_ctx mmi_sys_temp sensors_class mcDrvModule
 
 on fs
    # Majority of MMI DLKMs should be in this group
    setprop vendor.mmi_init.stage common
+   insmod /vendor/lib/modules/leds_aw99703.ko
+   insmod /vendor/lib/modules/leds_lm3697.ko
+   insmod /vendor/lib/modules/goodix_v1430_mmi.ko
+   insmod /vendor/lib/modules/goodix_v1430_update_mmi.ko
+   insmod /vendor/lib/modules/goodix_v1430_ts_tools_mmi.ko
+   insmod /vendor/lib/modules/sec_mmi.ko
+   insmod /vendor/lib/modules/stmvl53l1.ko
    insmod /vendor/lib/modules/cci_intf.ko
+   insmod /vendor/lib/modules/qpnp-smbcharger-mmi.ko
+   insmod /vendor/lib/modules/ilitek_0flash_mmi.ko
    insmod /vendor/lib/modules/nova_0flash_mmi.ko
-   insmod /vendor/lib/modules/ili9882_mmi.ko
+   insmod /vendor/lib/modules/focaltech_0flash_mmi.ko
    insmod /vendor/lib/modules/qpnp_adaptive_charge.ko
-   insmod /vendor/lib/modules/qpnp-power-on-mmi.ko
-   insmod /vendor/lib/modules/sensors_class.ko
-   insmod /vendor/lib/modules/sx933x_sar.ko
-   exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_snd_soc_aw882xx
+   exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules qpnp-power-on-mmi watchdogtest sensor_class abov_sar_mmi_overlay audio_snd_soc_aw882xx tps61280
 
 on post-fs-data
    # Load DLKM that can afford being loaded later
@@ -38,26 +44,23 @@ on early-boot
    mkdir /mnt/vendor/persist/goodix 0770 system system
 
 on boot
-   # Change ownership for capsensor
-   chown root input /sys/class/sensors/Moto\ CapSense\ Ch0/enable
-   chown root input /sys/class/sensors/Moto\ CapSense\ Ch0/poll_delay
-   chown root input /sys/class/sensors/Moto\ CapSense\ Ch1/enable
-   chown root input /sys/class/sensors/Moto\ CapSense\ Ch1/poll_delay
-   chown root input /sys/class/sensors/Moto\ CapSense\ Ch2/enable
-   chown root input /sys/class/sensors/Moto\ CapSense\ Ch2/poll_delay
-   chown root input /sys/class/sensors/Moto\ CapSense\ Ch3/enable
-   chown root input /sys/class/sensors/Moto\ CapSense\ Ch3/poll_delay
-   chown root input /sys/class/sensors/Moto\ CapSense\ Ch4/enable
-   chown root input /sys/class/sensors/Moto\ CapSense\ Ch4/poll_delay
+   # change permission for capsensor
    chown system system /sys/class/capsense/reset
    chown system system /sys/class/capsense/int_state
-
+   # Change ownership for capsensor
+   chown root input /sys/class/sensors/capsense_bottom_left/enable
+   chown root input /sys/class/sensors/capsense_bottom_left/poll_delay
+   chown root input /sys/class/sensors/capsense_bottom_right/enable
+   chown root input /sys/class/sensors/capsense_bottom_right/poll_delay
+   chown root input /sys/class/sensors/capsense_top_left/enable
+   chown root input /sys/class/sensors/capsense_top_left/poll_delay
+   chown root input /sys/class/sensors/capsense_top_right/enable
+   chown root input /sys/class/sensors/capsense_top_right/poll_delay
+   chown root input /sys/class/sensors/capsense_top/enable
+   chown root input /sys/class/sensors/capsense_top/poll_delay
    # change permission for adaptive charging
    chown system system /sys/module/qpnp_adaptive_charge/parameters/upper_limit
    chown system system /sys/module/qpnp_adaptive_charge/parameters/lower_limit
-   # change ownership of display early suspend node
-   chown root system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_early_power
-   chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_early_power
 
 #service vendor.mmi_modules /vendor/bin/init.mmi.modules.sh
 #    user root
