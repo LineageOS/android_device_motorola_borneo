@@ -1,6 +1,7 @@
 <!--
     Input:
         manifest_b.xml
+        manifest_no_n.xml
 -->
 <manifest version="2.0" type="device">
     <hal format="hidl" override="true">
