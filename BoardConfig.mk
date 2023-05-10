@@ -33,7 +33,7 @@ TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom_emmc
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 43
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2023-03-01
+VENDOR_SECURITY_PATCH := 2023-02-01
 
 # Inherit from the proprietary version
 include vendor/motorola/borneo/BoardConfigVendor.mk
