@@ -17,13 +17,6 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 1600
 TARGET_SCREEN_WIDTH := 720
 
-# NFC
-PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
-
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
@@ -34,21 +27,6 @@ PRODUCT_PACKAGES += \
     init.oem.fingerprint.sh \
     init.oem.fingerprint2.sh \
     init.mmi.overlay.rc
-
-# Permissions
-DEVICE_NFC_SKUS := b bc d dc f fc
-DEVICE_COMPASS_SKUS := b d dn f n
-
-PRODUCT_COPY_FILES += \
-$(foreach DEVICE_SKU, $(DEVICE_NFC_SKUS), \
-    $(LOCAL_PATH)/permissions/unavail.android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_$(DEVICE_SKU)/unavail.android.hardware.nfc.hce.xml \
-    $(LOCAL_PATH)/permissions/unavail.android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_$(DEVICE_SKU)/unavail.android.hardware.nfc.hcef.xml \
-    $(LOCAL_PATH)/permissions/unavail.android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_$(DEVICE_SKU)/unavail.android.hardware.nfc.uicc.xml \
-    $(LOCAL_PATH)/permissions/unavail.android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_$(DEVICE_SKU)/unavail.android.hardware.nfc.xml)
-
-PRODUCT_COPY_FILES += \
-$(foreach DEVICE_SKU, $(DEVICE_COMPASS_SKUS), \
-    $(LOCAL_PATH)/permissions/unavail.android.hardware.sensor.compass.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_$(DEVICE_SKU)/unavail.android.hardware.sensor.compass.xml)
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 29
