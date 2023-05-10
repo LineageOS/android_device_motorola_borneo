@@ -24,13 +24,17 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    fstab.qcom_emmc \
+    fstab.qcom \
     init.oem.fingerprint.sh \
     init.oem.fingerprint2.sh \
     init.mmi.overlay.rc
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 29
+
+# Vendor ramdisk
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom_ramdisk:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/motorola/borneo/borneo-vendor.mk)
