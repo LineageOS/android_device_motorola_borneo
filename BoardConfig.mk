@@ -35,5 +35,8 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 43
 # Security patch level
 VENDOR_SECURITY_PATCH := 2023-02-01
 
+# Verified Boot
+BOARD_AVB_ROLLBACK_INDEX := 20
+
 # Inherit from the proprietary version
 include vendor/motorola/borneo/BoardConfigVendor.mk
