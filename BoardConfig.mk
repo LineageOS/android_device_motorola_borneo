@@ -9,6 +9,10 @@ include device/motorola/sm6225-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/motorola/borneo
 
+# A/B
+AB_OTA_PARTITIONS += \
+    recovery
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := borneo
 
@@ -24,6 +28,7 @@ ODM_MANIFEST_F_FILES := $(DEVICE_PATH)/sku/manifest_f.xml
 TARGET_KERNEL_CONFIG += vendor/ext_config/borneo-default.config
 
 # Partitions
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 102400000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 48937967000
 
 BOARD_SUPER_PARTITION_SIZE := 10027008000
