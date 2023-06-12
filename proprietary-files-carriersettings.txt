@@ -1,0 +1,3 @@
+# All blobs below are extracted from the release mentioned in proprietary-files.txt
+product/etc/CarrierSettings/carrier_list.pb
+product/etc/CarrierSettings/others.pb
