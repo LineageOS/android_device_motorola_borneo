@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from caprip_retail S0RCS32.41-10-19-14
+# All unpinned blobs below are extracted from borneo_retail RZBS31.Q2-143-27-25
 
 # ACDB
 vendor/etc/acdbdata/Bluetooth_cal.acdb
