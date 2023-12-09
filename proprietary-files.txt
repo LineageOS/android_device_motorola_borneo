@@ -232,3 +232,11 @@ vendor/firmware/focaltech-djnboe-ft8009-07-000-borneo.bin
 vendor/firmware/ilitek_fw.bin
 vendor/firmware/novatek_ts_fw.bin
 vendor/firmware/novatek_ts_mp.bin
+
+# Touchscreen firmware (recovery)
+vendor/firmware/FT8006U_Pramboot.bin:recovery/root/vendor/firmware/FT8006U_Pramboot.bin
+vendor/firmware/NT36xxx_MP_Setting_Criteria_601E.csv:recovery/root/vendor/firmware/NT36xxx_MP_Setting_Criteria_601E.csv
+vendor/firmware/focaltech-djnboe-ft8009-07-000-borneo.bin:recovery/root/vendor/firmware/focaltech-djnboe-ft8009-07-000-borneo.bin
+vendor/firmware/ilitek_fw.bin:recovery/root/vendor/firmware/ilitek_fw.bin
+vendor/firmware/novatek_ts_fw.bin:recovery/root/vendor/firmware/novatek_ts_fw.bin
+vendor/firmware/novatek_ts_mp.bin:recovery/root/vendor/firmware/novatek_ts_mp.bin

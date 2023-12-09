@@ -1,0 +1,5 @@
+on boot
+   insmod /lib/modules/sensors_class.ko
+   insmod /lib/modules/ilitek_0flash_mmi.ko
+   insmod /lib/modules/nova_0flash_mmi.ko
+   insmod /lib/modules/focaltech_0flash_mmi.ko
