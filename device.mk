@@ -7,6 +7,10 @@
 # Inherit from sm6225-common
 $(call inherit-product, device/motorola/sm6225-common/bengal.mk)
 
+# A/B
+AB_OTA_PARTITIONS += \
+    recovery
+
 # Audio - Configs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
