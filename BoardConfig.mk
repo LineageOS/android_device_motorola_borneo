@@ -25,6 +25,7 @@ ODM_MANIFEST_B_FILES := $(DEVICE_PATH)/sku/manifest_b.xml
 ODM_MANIFEST_F_FILES := $(DEVICE_PATH)/sku/manifest_f.xml
 
 # Kernel
+BOARD_BOOT_HEADER_VERSION := 2
 TARGET_KERNEL_CONFIG += vendor/ext_config/borneo-default.config
 
 # Partitions
