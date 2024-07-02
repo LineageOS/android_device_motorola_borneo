@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa72ff6c_00442601",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-07-02T10:23:13Z",
+      "side": 0,
+      "message": "Add translatable\u003d\"false\" back",
+      "range": {
+        "startLine": 205,
+        "startChar": 11,
+        "endLine": 205,
+        "endChar": 32
+      },
+      "revId": "83148d3b334c64c3ac41e8ca1b79609f4f924848",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
