@@ -126,7 +126,6 @@ vendor/lib64/libmmcamera_cac3.so
 vendor/lib64/libmmcamera_mfnr.so
 vendor/lib64/libmot_afd.so
 vendor/lib64/libmot_lux_standardization.so
-vendor/lib64/libofflinelog.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopestriping.so
 vendor/lib64/libswregistrationalgo.so
