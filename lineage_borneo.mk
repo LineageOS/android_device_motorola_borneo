@@ -19,10 +19,10 @@ PRODUCT_DEVICE := borneo
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto g power (2021)
 PRODUCT_MANUFACTURER := motorola
+
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
-BUILD_FINGERPRINT := "motorola/borneo_retail/borneo:11/RZBS31.Q2-143-27-25/418ef:user/release-keys"
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=borneo_retail \
-    PRIVATE_BUILD_DESC="borneo_retail-user 11 RZBS31.Q2-143-27-25 418ef release-keys"
+    BuildDesc="borneo_retail-user 11 RZBS31.Q2-143-27-25 418ef release-keys" \
+    BuildFingerprint=motorola/borneo_retail/borneo:11/RZBS31.Q2-143-27-25/418ef:user/release-keys \
+    DeviceProduct=borneo_retail
