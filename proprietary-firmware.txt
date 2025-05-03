@@ -1,4 +1,4 @@
-# All firmware images below are extracted from borneo_retail RZBS31.Q2-143-27-25
+# All firmware images below are extracted from the release mentioned in proprietary-files.txt
 
 abl.elf:abl.img;AB
 BTFM.bin:bluetooth.img;AB
