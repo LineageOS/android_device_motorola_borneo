@@ -165,6 +165,9 @@ vendor/lib64/vendor.egistec.hardware.fingerprint@2.0.so
 # Graphics (Adreno firmware)
 vendor/firmware/a630_sqe.fw
 
+# OEM
+vendor/etc/vhw.xml
+
 # Sensors configs
 vendor/etc/sensors/config/bengal_power_0.json
 vendor/etc/sensors/config/borneo_ak991x_0.json
@@ -223,3 +226,6 @@ vendor/firmware/focaltech-djnboe-ft8009-07-000-borneo.bin:recovery/root/vendor/f
 vendor/firmware/ilitek_fw.bin:recovery/root/vendor/firmware/ilitek_fw.bin
 vendor/firmware/novatek_ts_fw.bin:recovery/root/vendor/firmware/djn_novatek_ts_fw.bin
 vendor/firmware/novatek_ts_mp.bin:recovery/root/vendor/firmware/djn_novatek_ts_mp.bin
+
+# WiFi
+vendor/bin/cnss-daemon
