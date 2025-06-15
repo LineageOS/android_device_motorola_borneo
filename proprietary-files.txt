@@ -141,7 +141,8 @@ vendor/lib64/libvidhance.so
 vendor/etc/camera/dual_golden_depth.bin
 vendor/etc/camera/vidhance_calibration
 
-# CapSense firmware
+# CapSense
+vendor/bin/capsense_reset
 vendor/firmware/AbovCapSense.BIN
 vendor/firmware/AbovCapSense_4.BIN
 
