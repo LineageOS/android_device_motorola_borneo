@@ -33,8 +33,9 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,livedisplay_sysfs,enable_ab,true)
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+PRODUCT_PACKAGES += \
+    FrameworksResDevice \
+    SystemUIResDevice
 
 # Shipping API level
 BOARD_SHIPPING_API_LEVEL := 29
