@@ -40,7 +40,8 @@ $(call soong_config_set,livedisplay_sysfs,enable_ab,true)
 PRODUCT_PACKAGES += \
     FrameworksResDevice \
     LineagePlatformDevice \
-    SystemUIResDevice
+    SystemUIResDevice \
+    WifiResDevice
 
 # Shipping API level
 BOARD_SHIPPING_API_LEVEL := 29
