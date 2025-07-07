@@ -37,7 +37,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FrameworksResDevice \
     LineagePlatformDevice \
-    SystemUIResDevice
+    SystemUIResDevice \
+    WifiResDevice
 
 # Shipping API level
 BOARD_SHIPPING_API_LEVEL := 29
