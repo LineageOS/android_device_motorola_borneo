@@ -29,12 +29,17 @@ PRODUCT_PACKAGES += \
     init.mmi.overlay.rc \
     init.recovery.touch.rc
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.lineage
+
 # LiveDisplay
 $(call soong_config_set,livedisplay_sysfs,enable_ab,true)
 
 # Overlay
 PRODUCT_PACKAGES += \
     FrameworksResDevice \
+    LineagePlatformDevice \
     SystemUIResDevice
 
 # Shipping API level
