@@ -29,6 +29,9 @@ PRODUCT_PACKAGES += \
     init.mmi.overlay.rc \
     init.recovery.touch.rc
 
+# LiveDisplay
+$(call soong_config_set,livedisplay_sysfs,enable_ab,true)
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
