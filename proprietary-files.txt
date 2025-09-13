@@ -152,8 +152,13 @@ vendor/etc/qdcm_calib_data_mipi_mot_vid_djnboe_720p_655.xml
 vendor/etc/qdcm_calib_data_mipi_mot_vid_tm_720p_655.xml
 
 # Fingerprint
+system/usr/idc/uinput-egis.idc:vendor/usr/idc/uinput-egis.idc
+system/usr/idc/uinput-fpc.idc:vendor/usr/idc/uinput-fpc.idc
+system/usr/keylayout/uinput-egis.kl:vendor/usr/keylayout/uinput-egis.kl
+system/usr/keylayout/uinput-fpc.kl:vendor/usr/keylayout/uinput-fpc.kl
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-ets
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc
+vendor/bin/hw/egis_ident
 vendor/bin/hw/fpc_ident
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-ets2.rc
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc
